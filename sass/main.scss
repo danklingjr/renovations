@@ -6,9 +6,13 @@
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
+
+/*! Header
+//////////////////////////////////////*/
 .branding{
 	display: inline-block;
 	vertical-align: bottom;
+	margin-top: 15px;
 }
 .nav__container{
 	position: relative;
@@ -17,14 +21,95 @@
 	float: right;
 }
 .phone{
+	font-size: em(24px,$font-size);
+	font-weight: 700;
 	text-align: right;
+	margin-bottom: 5px
 }
 header[role=banner]{
 	padding: 20px 0 10px;
 }
-.hero{
+nav[role=navigation]{
+	a{
+		font-family: $headerFont;
+		font-size: em(18px,$font-size);
+		font-weight: 400;
+		color: $textColor;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-left: 20px;
+	}
+}
+
+/*! Hero unit
+//////////////////////////////////////*/
+.hero,
+.image-break{
 	img{
 		width: 100%;
+	}
+}
+
+/*! Main content
+//////////////////////////////////////*/
+.content__main{
+	position: relative;
+	background-color: #fff;
+	margin-top: -180px;
+	z-index: 2;
+	h1{
+		font-size: em(48px,$font-size);
+		font-weight: normal;
+		color: $primaryColor;
+		margin-bottom: 20px;
+	}
+}
+.content__main--intro{
+	padding: 40px 40px 40px 5%;
+	p{
+		font-size: em(18px,$font-size);
+		color: $textColor;
+		line-height: 1.8em;
+		margin-bottom: 20px;
+	}
+}
+.sidebar{
+	position: relative;
+	z-index: 2;
+	background-color: $darkColor;
+	padding: 40px 5% 40px 40px;
+	margin-bottom: -300px !important;
+	h2,
+	li,
+	p{
+		color: $secondaryColor;
+	}
+	h2{
+		font-size: em(36px,$font-size);
+		margin-bottom: 20px;
+	}
+	li{
+		font-size: em(24px,$font-size);
+		margin-left: 25px;
+		margin-bottom: 10px;
+	}
+	p{
+		font-size: em(18px,$font-size);
+		margin-top: 40px;
+	}
+}
+.project-types{
+	background-color: $secondaryColor;
+	padding: 20px 40px 20px 5%;
+	p{
+		font-size: em(24px,$font-size);
+		color: $tanText;
+		b{
+			margin: 0 5px;
+		}
+		b:first-child{
+			margin: 0 5px 0 0;
+		}
 	}
 }
 

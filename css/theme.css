@@ -1,0 +1,22 @@
+/*!////////////////////////////////////////////////
+// THEME
+/////////////////////////////////////////////////*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Magra", sans-serif; }
+
+p,
+li {
+  font-family: "Magra", sans-serif;
+  font-weight: 400; }
+
+*[class^="button"] {
+  background-color: #fbb100;
+  color: #fff !important;
+  padding: 5px 10px; }
+
+*[class^="button"]:hover,
+*[class^="button"]:focus {
+  background-color: #815246; }

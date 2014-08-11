@@ -1,8 +1,37 @@
 /*!////////////////////////////////////////////////
 // THEME
 /////////////////////////////////////////////////*/
-$base-font-size: 16px;
+$font-size: 16px;
 @function em($px, $base: $base-font-size){
 	@return ($px / $base) * 1em;
 }
 
+$primaryColor: #815246; //brick red
+$secondaryColor: #f4ecde; //tan
+$darkColor: #3e3e3e; //dark gray
+$tanText: #968466; //dark tan
+$textColor: #252525; //almost black
+$altColor: #fbb100; //yellow
+
+$headerFont: 'Magra', sans-serif; //400 regular and 700 bold
+
+h1,
+h2,
+h3,
+h4{
+	font-family: $headerFont;
+}
+p,
+li{
+	font-family: $headerFont;
+	font-weight: 400;
+}
+*[class^="button"]{
+	background-color: $altColor;
+	color: #fff !important;
+	padding: 5px 10px;
+}
+*[class^="button"]:hover,
+*[class^="button"]:focus{
+	background-color: $primaryColor;
+}

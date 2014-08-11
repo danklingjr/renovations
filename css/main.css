@@ -365,12 +365,35 @@ textarea {
 /*!////////////////////////////////////////////////
 // THEME
 /////////////////////////////////////////////////*/
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Magra", sans-serif; }
+
+p,
+li {
+  font-family: "Magra", sans-serif;
+  font-weight: 400; }
+
+*[class^="button"] {
+  background-color: #fbb100;
+  color: #fff !important;
+  padding: 5px 10px; }
+
+*[class^="button"]:hover,
+*[class^="button"]:focus {
+  background-color: #815246; }
+
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
+/*! Header
+//////////////////////////////////////*/
 .branding {
   display: inline-block;
-  vertical-align: bottom; }
+  vertical-align: bottom;
+  margin-top: 15px; }
 
 .nav__container {
   position: relative;
@@ -379,13 +402,81 @@ textarea {
   float: right; }
 
 .phone {
-  text-align: right; }
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: right;
+  margin-bottom: 5px; }
 
 header[role=banner] {
   padding: 20px 0 10px; }
 
-.hero img {
+nav[role=navigation] a {
+  font-family: "Magra", sans-serif;
+  font-size: 1.125em;
+  font-weight: 400;
+  color: #252525;
+  text-transform: uppercase;
+  text-decoration: none;
+  margin-left: 20px; }
+
+/*! Hero unit
+//////////////////////////////////////*/
+.hero img,
+.image-break img {
   width: 100%; }
+
+/*! Main content
+//////////////////////////////////////*/
+.content__main {
+  position: relative;
+  background-color: #fff;
+  margin-top: -180px;
+  z-index: 2; }
+  .content__main h1 {
+    font-size: 3em;
+    font-weight: normal;
+    color: #815246;
+    margin-bottom: 20px; }
+
+.content__main--intro {
+  padding: 40px 40px 40px 5%; }
+  .content__main--intro p {
+    font-size: 1.125em;
+    color: #252525;
+    line-height: 1.8em;
+    margin-bottom: 20px; }
+
+.sidebar {
+  position: relative;
+  z-index: 2;
+  background-color: #3e3e3e;
+  padding: 40px 5% 40px 40px;
+  margin-bottom: -300px !important; }
+  .sidebar h2,
+  .sidebar li,
+  .sidebar p {
+    color: #f4ecde; }
+  .sidebar h2 {
+    font-size: 2.25em;
+    margin-bottom: 20px; }
+  .sidebar li {
+    font-size: 1.5em;
+    margin-left: 25px;
+    margin-bottom: 10px; }
+  .sidebar p {
+    font-size: 1.125em;
+    margin-top: 40px; }
+
+.project-types {
+  background-color: #f4ecde;
+  padding: 20px 40px 20px 5%; }
+  .project-types p {
+    font-size: 1.5em;
+    color: #968466; }
+    .project-types p b {
+      margin: 0 5px; }
+    .project-types p b:first-child {
+      margin: 0 5px 0 0; }
 
 /*!////////////////////////////////////////////////
 // STATES
