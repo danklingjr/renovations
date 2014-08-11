@@ -408,7 +408,17 @@ li {
   margin-bottom: 5px; }
 
 header[role=banner] {
-  padding: 20px 0 10px; }
+  position: relative;
+  padding: 20px 0 10px;
+  z-index: 2; }
+
+header[role=banner]:after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.2); }
 
 nav[role=navigation] a {
   font-family: "Magra", sans-serif;
@@ -421,9 +431,21 @@ nav[role=navigation] a {
 
 /*! Hero unit
 //////////////////////////////////////*/
-.hero img,
-.image-break img {
-  width: 100%; }
+.hero,
+.image-break {
+  position: relative; }
+  .hero img,
+  .image-break img {
+    width: 100%; }
+
+.hero:after,
+.image-break:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 8px;
+  background-color: rgba(0, 0, 0, 0.2); }
 
 /*! Main content
 //////////////////////////////////////*/
@@ -478,6 +500,8 @@ nav[role=navigation] a {
     .project-types p b:first-child {
       margin: 0 5px 0 0; }
 
+/*! Services
+//////////////////////////////////////*/
 /*!////////////////////////////////////////////////
 // STATES
 /////////////////////////////////////////////////*/
