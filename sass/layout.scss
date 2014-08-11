@@ -4,7 +4,7 @@
 .wrap {
     //The `max-width` property is the width governer. I dare you to experiment
     //with setting this larger, something like 1280px.
-    max-width: 1280px;
+    // max-width: 1280px;
     width: 92%;
     margin: 0px auto;
     position: relative;
@@ -14,7 +14,7 @@
 }
 @media screen and (min-width: 480px) {
     .wrap {
-        width: 98%;
+        width: 90%;
     }
 
     .grid-1,

@@ -6,11 +6,27 @@
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
-.test{
-	min-height: 100px;
-	background-color: gray;
+.branding{
+	display: inline-block;
+	vertical-align: bottom;
 }
-
+.nav__container{
+	position: relative;
+	display: inline-block;
+	vertical-align: bottom;
+	float: right;
+}
+.phone{
+	text-align: right;
+}
+header[role=banner]{
+	padding: 20px 0 10px;
+}
+.hero{
+	img{
+		width: 100%;
+	}
+}
 
 /*!////////////////////////////////////////////////
 // STATES

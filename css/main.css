@@ -114,7 +114,6 @@ textarea {
 // LAYOUT
 /////////////////////////////////////////////////*/
 .wrap {
-  max-width: 1280px;
   width: 92%;
   margin: 0px auto;
   position: relative; }
@@ -124,7 +123,7 @@ textarea {
 
 @media screen and (min-width: 480px) {
   .wrap {
-    width: 98%; }
+    width: 90%; }
 
   .grid-1,
   .grid-2,
@@ -369,9 +368,24 @@ textarea {
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
-.test {
-  min-height: 100px;
-  background-color: gray; }
+.branding {
+  display: inline-block;
+  vertical-align: bottom; }
+
+.nav__container {
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  float: right; }
+
+.phone {
+  text-align: right; }
+
+header[role=banner] {
+  padding: 20px 0 10px; }
+
+.hero img {
+  width: 100%; }
 
 /*!////////////////////////////////////////////////
 // STATES
