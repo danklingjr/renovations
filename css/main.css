@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!////////////////////////////////////////////////
 // BASE
 /////////////////////////////////////////////////*/
@@ -388,6 +389,18 @@ li {
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
+body {
+  font-size: 95%; }
+  @media screen and (min-width: 800px) {
+    body {
+      font-size: 75%; } }
+  @media screen and (min-width: 1024px) {
+    body {
+      font-size: 90%; } }
+  @media screen and (min-width: 1440px) {
+    body {
+      font-size: 100%; } }
+
 /*! Header
 //////////////////////////////////////*/
 .branding {
@@ -428,6 +441,9 @@ nav[role=navigation] a {
   text-transform: uppercase;
   text-decoration: none;
   margin-left: 20px; }
+nav[role=navigation] a:hover,
+nav[role=navigation] a:focus {
+  color: #815246; }
 
 /*! Hero unit
 //////////////////////////////////////*/
@@ -443,6 +459,7 @@ nav[role=navigation] a {
   content: "";
   position: absolute;
   bottom: 0;
+  left: 0;
   width: 100%;
   height: 8px;
   background-color: rgba(0, 0, 0, 0.2); }
@@ -461,7 +478,13 @@ nav[role=navigation] a {
     margin-bottom: 20px; }
 
 .content__main--intro {
-  padding: 40px 40px 40px 5%; }
+  padding: 20px 20px 20px 5%; }
+  @media screen and (min-width: 800px) {
+    .content__main--intro {
+      padding: 40px 40px 40px 5%; } }
+  @media screen and (min-width: 1024px) {
+    .content__main--intro {
+      padding: 40px 40px 40px 8%; } }
   .content__main--intro p {
     font-size: 1.125em;
     color: #252525;
@@ -472,8 +495,14 @@ nav[role=navigation] a {
   position: relative;
   z-index: 2;
   background-color: #3e3e3e;
-  padding: 40px 5% 40px 40px;
+  padding: 20px 5% 20px 20px;
   margin-bottom: -300px !important; }
+  @media screen and (min-width: 800px) {
+    .sidebar {
+      padding: 40px 5% 40px 40px; } }
+  @media screen and (min-width: 1024px) {
+    .sidebar {
+      padding: 40px 8% 40px 40px; } }
   .sidebar h2,
   .sidebar li,
   .sidebar p {
@@ -489,9 +518,28 @@ nav[role=navigation] a {
     font-size: 1.125em;
     margin-top: 40px; }
 
+@media screen and (min-width: 400px) and (max-width: 875px) {
+  .content__main.grid-4 {
+    width: 100%;
+    margin-top: 0; }
+
+  .sidebar.grid-2 {
+    width: 100%;
+    margin-bottom: 0 !important; }
+    .sidebar.grid-2 li {
+      position: relative;
+      display: inline;
+      margin-left: 0;
+      margin-right: 25px; }
+    .sidebar.grid-2 li:after {
+      content: "•";
+      margin-left: 15px;
+      margin-right: -15px; }
+    .sidebar.grid-2 li:last-child:after {
+      display: none; } }
 .project-types {
   background-color: #f4ecde;
-  padding: 20px 40px 20px 5%; }
+  padding: 20px 40px 20px 8%; }
   .project-types p {
     font-size: 1.5em;
     color: #968466; }
@@ -502,6 +550,48 @@ nav[role=navigation] a {
 
 /*! Services
 //////////////////////////////////////*/
+.content__services {
+  background-color: #f4ecde;
+  margin-top: -70px;
+  padding-bottom: 20px; }
+
+.headline__services {
+  font-size: 3em;
+  font-weight: normal;
+  color: #968466;
+  padding: 40px; }
+
+.service {
+  text-align: center; }
+  .service figure img {
+    width: 100%; }
+  .service h3,
+  .service p {
+    color: #968466; }
+  .service h3 {
+    font-size: 2em;
+    line-height: 0.8em;
+    margin-top: 20px; }
+  .service p {
+    font-size: 1.5em; }
+
+/*! Footer
+//////////////////////////////////////*/
+footer[role=contentinfo] {
+  margin: 40px 0; }
+
+.sitemap ul {
+  -webkit-column-count: 5;
+  -moz-column-count: 5;
+  -o-column-count: 5;
+  column-count: 5;
+  -webkit-column-gap: 20px;
+  -moz-column-gap: 20px;
+  -o-column-gap: 20px;
+  column-gap: 20px; }
+.sitemap li {
+  list-style: none; }
+
 /*!////////////////////////////////////////////////
 // STATES
 /////////////////////////////////////////////////*/

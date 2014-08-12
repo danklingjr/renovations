@@ -6,6 +6,18 @@
 /*!////////////////////////////////////////////////
 // MODULES
 /////////////////////////////////////////////////*/
+body{
+	font-size: 95%;
+	@media screen and (min-width: 800px){
+		font-size: 75%;
+	}
+	@media screen and (min-width: 1024px){
+		font-size: 90%;
+	}
+	@media screen and (min-width: 1440px){
+		font-size: 100%;
+	}
+}
 
 /*! Header
 //////////////////////////////////////*/
@@ -49,6 +61,10 @@ nav[role=navigation]{
 		text-decoration: none;
 		margin-left: 20px;
 	}
+	a:hover,
+	a:focus{
+		color: $primaryColor;
+	}
 }
 
 /*! Hero unit
@@ -65,6 +81,7 @@ nav[role=navigation]{
 	content: "";
 	position: absolute;
 	bottom: 0;
+	left: 0;
 	width: 100%;
 	height: 8px;
 	background-color: transparentize(#000, 0.8);
@@ -85,7 +102,13 @@ nav[role=navigation]{
 	}
 }
 .content__main--intro{
-	padding: 40px 40px 40px 5%;
+	padding: 20px 20px 20px 5%;
+	@media screen and (min-width: 800px){
+		padding: 40px 40px 40px 5%;
+	}
+	@media screen and (min-width: 1024px){
+		padding: 40px 40px 40px 8%;
+	}
 	p{
 		font-size: em(18px,$font-size);
 		color: $textColor;
@@ -97,7 +120,13 @@ nav[role=navigation]{
 	position: relative;
 	z-index: 2;
 	background-color: $darkColor;
-	padding: 40px 5% 40px 40px;
+	padding: 20px 5% 20px 20px;
+	@media screen and (min-width: 800px){
+		padding: 40px 5% 40px 40px;
+	}
+	@media screen and (min-width: 1024px){
+		padding: 40px 8% 40px 40px;
+	}
 	margin-bottom: -300px !important;
 	h2,
 	li,
@@ -118,9 +147,33 @@ nav[role=navigation]{
 		margin-top: 40px;
 	}
 }
+@media screen and (min-width: 400px) and (max-width: 875px){
+	.content__main.grid-4{
+		width: 100%;
+		margin-top: 0;
+	}
+	.sidebar.grid-2{
+		width: 100%;
+		margin-bottom: 0 !important;
+		li{
+			position: relative;
+			display: inline;
+			margin-left: 0;
+			margin-right: 25px;
+		}
+		li:after{
+			content: "•";
+			margin-left: 15px;
+			margin-right: -15px;
+		}
+		li:last-child:after{
+			display: none;
+		}
+	}
+}
 .project-types{
 	background-color: $secondaryColor;
-	padding: 20px 40px 20px 5%;
+	padding: 20px 40px 20px 8%;
 	p{
 		font-size: em(24px,$font-size);
 		color: $tanText;
@@ -135,7 +188,52 @@ nav[role=navigation]{
 
 /*! Services
 //////////////////////////////////////*/
+.content__services{
+	background-color: $secondaryColor;
+	margin-top: -70px;
+	padding-bottom: 20px;
+}
+.headline__services{
+	font-size: em(48px,$font-size);
+	font-weight: normal;
+	color: $tanText;
+	padding: 40px;
+}
+.service{
+	text-align: center;
+	figure{
+		img{
+			width: 100%;
+		}
+	}
+	h3,
+	p{
+		color: $tanText;
+	}
+	h3{
+		font-size: em(32px,$font-size);
+		line-height: 0.8em;
+		margin-top: 20px;
+	}
+	p{
+		font-size: em(24px,$font-size);
+	}
+}
 
+/*! Footer
+//////////////////////////////////////*/
+footer[role=contentinfo]{
+	margin: 40px 0;
+}
+.sitemap{
+	ul{
+		@include prefix(column-count, 5);
+		@include prefix(column-gap, 20px);
+	}
+	li{
+		list-style: none;
+	}
+}
 
 
 /*!////////////////////////////////////////////////
