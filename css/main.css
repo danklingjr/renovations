@@ -425,6 +425,7 @@ li {
   width: 100%;
   max-width: 410px;
   display: block;
+  float: none;
   vertical-align: bottom;
   margin: 15px auto 0; }
   .branding img {
@@ -438,7 +439,8 @@ li {
     .branding {
       max-width: 280px;
       display: inline-block;
-      margin: 15px 0 0 0; } }
+      margin: 15px 0 0 0;
+      float: left; } }
   @media screen and (min-width: 1320px) {
     .branding {
       max-width: 410px; } }
