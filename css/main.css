@@ -719,14 +719,20 @@ footer[role=contentinfo] {
   padding: 30px 0 0; }
 
 .sitemap ul {
-  -webkit-column-count: 5;
-  -moz-column-count: 5;
-  -o-column-count: 5;
-  column-count: 5;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  -o-column-count: 2;
+  column-count: 2;
   -webkit-column-gap: 20px;
   -moz-column-gap: 20px;
   -o-column-gap: 20px;
   column-gap: 20px; }
+  @media screen and (min-width: 800px) {
+    .sitemap ul {
+      -webkit-column-count: 5;
+      -moz-column-count: 5;
+      -o-column-count: 5;
+      column-count: 5; } }
 .sitemap li {
   list-style: none; }
 

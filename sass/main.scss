@@ -356,8 +356,11 @@ footer[role=contentinfo]{
 }
 .sitemap{
 	ul{
-		@include prefix(column-count, 5);
+		@include prefix(column-count, 2);
 		@include prefix(column-gap, 20px);
+		@media screen and (min-width: 800px){
+			@include prefix(column-count, 5);
+		}
 	}
 	li{
 		list-style: none;
