@@ -424,26 +424,54 @@ li {
 .branding {
   width: 100%;
   max-width: 410px;
-  display: inline-block;
+  display: block;
   vertical-align: bottom;
-  margin-top: 15px; }
+  margin: 15px auto 0; }
   .branding img {
     width: 100%; }
+  @media screen and (min-width: 800px) {
+    .branding {
+      max-width: 410px;
+      display: block;
+      margin: 15px auto 0; } }
+  @media screen and (min-width: 1172px) {
+    .branding {
+      max-width: 280px;
+      display: inline-block;
+      margin: 15px 0 0 0; } }
+  @media screen and (min-width: 1320px) {
+    .branding {
+      max-width: 410px; } }
 
 .nav__container {
   position: relative;
-  display: inline-block;
+  display: block;
   vertical-align: bottom;
-  float: none; }
+  float: none;
+  text-align: center;
+  width: 100%; }
   @media screen and (min-width: 800px) {
     .nav__container {
-      float: right; } }
+      text-align: center;
+      width: auto;
+      margin: 0 auto; } }
+  @media screen and (min-width: 1172px) {
+    .nav__container {
+      float: right;
+      display: inline-block;
+      text-align: right; } }
 
 .phone {
   font-size: 1.5em;
   font-weight: 700;
-  text-align: right;
+  text-align: center;
   margin-bottom: 5px; }
+  @media screen and (min-width: 800px) {
+    .phone {
+      text-align: center; } }
+  @media screen and (min-width: 1172px) {
+    .phone {
+      text-align: right; } }
 
 header[role=banner] {
   position: relative;
@@ -459,7 +487,8 @@ header[role=banner]:after {
   background-color: rgba(0, 0, 0, 0.2); }
 
 nav[role=navigation] {
-  display: none; }
+  display: none;
+  text-align: center; }
   nav[role=navigation] a {
     font-family: "Magra", sans-serif;
     font-size: 1.125em;
@@ -473,16 +502,37 @@ nav[role=navigation] {
     color: #815246; }
   @media screen and (min-width: 800px) {
     nav[role=navigation] {
-      display: block; } }
+      text-align: center;
+      display: block;
+      font-size: 1em; } }
+  @media screen and (min-width: 1172px) {
+    nav[role=navigation] {
+      text-align: right; } }
+  @media screen and (min-width: 1320px) {
+    nav[role=navigation] {
+      font-size: 1em; } }
+  @media screen and (min-width: 1500px) {
+    nav[role=navigation] {
+      font-size: 1.125em; } }
 
 .mobile__button {
-  display: block; }
+  display: block;
+  font-size: 1.5em; }
   @media screen and (min-width: 800px) {
     .mobile__button {
       display: none; } }
 
 .mobile__nav {
   display: none; }
+  .mobile__nav a {
+    display: block;
+    font-family: "Magra", sans-serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    color: #252525;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin: 5px 0 5px; }
 
 /*! Hero unit
 //////////////////////////////////////*/

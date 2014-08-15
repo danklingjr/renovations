@@ -23,27 +23,58 @@ body{
 .branding{
 	width: 100%;
 	max-width: 410px;
-	display: inline-block;
+	display: block;
 	vertical-align: bottom;
-	margin-top: 15px;
+	margin: 15px auto 0;
 	img{
 		width: 100%;
+	}
+	@media screen and (min-width: 800px){
+		max-width: 410px;
+		display: block;
+		margin: 15px auto 0;
+
+	}
+	@media screen and (min-width: 1172px){
+		max-width: 280px;
+		display: inline-block;
+		margin: 15px 0 0 0;
+	}
+	@media screen and (min-width: 1320px){
+		max-width: 410px;
 	}
 }
 .nav__container{
 	position: relative;
-	display: inline-block;
+	display: block;
 	vertical-align: bottom;
 	float: none;
+	text-align: center;
+	width: 100%;
 	@media screen and (min-width: 800px){
-		float: right;
+		
+		text-align: center;
+		width: auto;
+		margin: 0 auto;
 	}
+	@media screen and (min-width: 1172px){
+		float: right;
+		display: inline-block;
+		text-align: right;
+	}
+
 }
 .phone{
 	font-size: em(24px,$font-size);
 	font-weight: 700;
-	text-align: right;
-	margin-bottom: 5px
+	text-align: center;
+	margin-bottom: 5px;
+	@media screen and (min-width: 800px){
+		text-align: center;
+	}
+	@media screen and (min-width: 1172px){
+		text-align: right;
+	}
 }
 header[role=banner]{
 	position: relative;
@@ -60,6 +91,7 @@ header[role=banner]:after{
 }
 nav[role=navigation]{
 	display: none;
+	text-align: center;
 	a{
 		font-family: $headerFont;
 		font-size: em(18px,$font-size);
@@ -74,17 +106,39 @@ nav[role=navigation]{
 		color: $primaryColor;
 	}
 	@media screen and (min-width: 800px){
+		text-align: center;
 		display: block;
+		font-size: em(16px,$font-size);
+	}
+	@media screen and (min-width: 1172px){
+		text-align: right;
+	}
+	@media screen and (min-width: 1320px){
+		font-size: em(16px,$font-size);
+	}
+	@media screen and (min-width: 1500px){
+		font-size: em(18px,$font-size);
 	}
 }
 .mobile__button{
 	display: block;
+	font-size: em(24px,$font-size);
 	@media screen and (min-width: 800px){
 		display: none;
 	}
 }
 .mobile__nav{
 	display: none;
+	a{
+		display: block;
+		font-family: $headerFont;
+		font-size: em(24px,$font-size);
+		font-weight: 400;
+		color: $textColor;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin: 5px 0 5px;
+	}
 }
 
 /*! Hero unit
