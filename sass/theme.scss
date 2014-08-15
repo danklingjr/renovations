@@ -28,10 +28,30 @@ li{
 }
 *[class^="button"]{
 	background-color: $altColor;
-	color: #fff !important;
+	color: #fff;
 	padding: 5px 10px;
 }
 *[class^="button"]:hover,
 *[class^="button"]:focus{
 	background-color: $primaryColor;
+}
+.button__nav{
+	color: #fff !important;
+}
+.button__sidebar{
+	display: block;
+	width: 100%;
+	background-color: $secondaryColor;
+	font-family: $headerFont;
+	font-size: em(24px, $font-size);
+	font-weight: bold;
+	color: $primaryColor;
+	text-align: center;
+	text-decoration: none;
+	margin-bottom: 10px;
+	padding: 15px 0;
+}
+.button__sidebar:hover,
+.button__sidebar:focus{
+	color: #fff;
 }

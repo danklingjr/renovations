@@ -7,9 +7,8 @@
 // MODULES
 /////////////////////////////////////////////////*/
 body{
-	font-size: 95%;
-	@media screen and (min-width: 800px){
-		font-size: 75%;
+	@media screen and (min-width: 400px){
+		font-size: 80%;
 	}
 	@media screen and (min-width: 1024px){
 		font-size: 90%;
@@ -22,15 +21,23 @@ body{
 /*! Header
 //////////////////////////////////////*/
 .branding{
+	width: 100%;
+	max-width: 410px;
 	display: inline-block;
 	vertical-align: bottom;
 	margin-top: 15px;
+	img{
+		width: 100%;
+	}
 }
 .nav__container{
 	position: relative;
 	display: inline-block;
 	vertical-align: bottom;
-	float: right;
+	float: none;
+	@media screen and (min-width: 800px){
+		float: right;
+	}
 }
 .phone{
 	font-size: em(24px,$font-size);
@@ -52,6 +59,7 @@ header[role=banner]:after{
 	background-color: transparentize(#000, 0.8);
 }
 nav[role=navigation]{
+	display: none;
 	a{
 		font-family: $headerFont;
 		font-size: em(18px,$font-size);
@@ -65,18 +73,30 @@ nav[role=navigation]{
 	a:focus{
 		color: $primaryColor;
 	}
+	@media screen and (min-width: 800px){
+		display: block;
+	}
+}
+.mobile__button{
+	display: block;
+	@media screen and (min-width: 800px){
+		display: none;
+	}
+}
+.mobile__nav{
+	display: none;
 }
 
 /*! Hero unit
 //////////////////////////////////////*/
-.hero,
+*[class^="hero"],
 .image-break{
 	position: relative;
 	img{
 		width: 100%;
 	}
 }
-.hero:after,
+*[class^="hero"]:after,
 .image-break:after{
 	content: "";
 	position: absolute;
@@ -85,6 +105,12 @@ nav[role=navigation]{
 	width: 100%;
 	height: 8px;
 	background-color: transparentize(#000, 0.8);
+}
+.hero--page{
+	
+	@media screen and (min-width: 875px){
+		height: 300px;
+	}
 }
 
 /*! Main content
@@ -115,8 +141,16 @@ nav[role=navigation]{
 		line-height: 1.8em;
 		margin-bottom: 20px;
 	}
+	h4{
+		font-family: $headerFont;
+		font-size: em(30px,$font-size);
+		font-style: normal;
+		font-weight: normal;
+		color: $primaryColor;
+		margin-bottom: 10px;
+	}
 }
-.sidebar{
+*[class^="sidebar"]{
 	position: relative;
 	z-index: 2;
 	background-color: $darkColor;
@@ -147,12 +181,15 @@ nav[role=navigation]{
 		margin-top: 40px;
 	}
 }
+.sidebar--page{
+	margin-bottom: 60px !important;
+}
 @media screen and (min-width: 400px) and (max-width: 875px){
 	.content__main.grid-4{
 		width: 100%;
 		margin-top: 0;
 	}
-	.sidebar.grid-2{
+	*[class^="sidebar"].grid-2{
 		width: 100%;
 		margin-bottom: 0 !important;
 		li{
@@ -220,10 +257,48 @@ nav[role=navigation]{
 	}
 }
 
+/*! Sub Page
+//////////////////////////////////////*/
+.graphic-quote{
+	blockquote{
+		font-family: $headerFont;
+		font-size: em(32px,$font-size);
+		font-weight: normal;
+		color: #a9a9a9;
+		margin: 0 0 10px 0;
+	}
+	cite{
+		font-family: $headerFont;
+		font-size: em(22px,$font-size);
+		font-style: normal;
+		color: #a9a9a9;
+	}
+}
+.graphic,
+.quote{
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+	margin-bottom: 20px;
+	@media screen and (min-width: 700px){
+		width: 50%;
+	}
+}
+.quote{
+	padding: 0;
+	@media screen and (min-width: 700px){
+		padding: 0 0 0 20px;
+	}
+}
+
 /*! Footer
 //////////////////////////////////////*/
 footer[role=contentinfo]{
 	margin: 40px 0;
+}
+.page footer[role=contentinfo]{
+	border-top: 8px solid #ccc;
+	padding: 30px 0 0;
 }
 .sitemap{
 	ul{
